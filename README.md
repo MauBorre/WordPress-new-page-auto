@@ -9,10 +9,10 @@ Hope you find it easy to use and useful! </br>
 3- Run ```pip install -r requirements.txt``` </br>
 
 ## Instructions
-Run ```python main.py``` </br>
-Add sections, select desired structures and add Elementor widgets as needed. </br>
-Put host and credentials </br>
-Click Confirm & Run (or just press Enter) </br>
+1- Run ```python main.py``` </br>
+2- Add sections, select desired structures and add Elementor widgets as needed. </br>
+3- Put host and credentials </br>
+4- Click Confirm & Run (or just press Enter) </br>
 
 ![app-content-loading-1](https://github.com/MauBorre/WordPress-new-page-auto/assets/122322896/2b4657d0-54b7-4629-861a-6a1f7a3abd94)
 
