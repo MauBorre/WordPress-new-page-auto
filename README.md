@@ -9,7 +9,7 @@ Hope you find it easy to use and useful! </br>
 3- Run ```pip install -r requirements.txt``` </br>
 
 ## Instructions
-1- Get the content for the new page.
+1- Get the content for the new page. </br>
 2- Run ```python main.py``` </br>
 3- Add sections, select desired structures and add Elementor widgets as needed. </br>
 4- Put host and credentials </br>
