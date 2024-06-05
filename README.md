@@ -1,18 +1,18 @@
 # WordPress-new-page-auto
-The intention of this project is to haste new-page creation.
-Just load your content on the GUI and watch your browser work for you.
-Hope you find it easy to use and useful!
+The intention of this project is to haste new-page creation. </br>
+Just load your content on the GUI and watch your browser work for you. </br>
+Hope you find it easy to use and useful! </br>
 
 ## Instalation
-1- Download all the files
-2- Open command prompt into master folder
-3- Run ```pip install -r requirements.txt```
+1- Download all the files </br>
+2- Open command prompt into master folder </br>
+3- Run ```pip install -r requirements.txt``` </br>
 
 ## Instructions
-Run ```python main.py```
-Add sections, select desired structures and add Elementor widgets as needed.
-Put host and credentials
-Click Confirm & Run (or just press Enter)
+Run ```python main.py``` </br>
+Add sections, select desired structures and add Elementor widgets as needed. </br>
+Put host and credentials </br>
+Click Confirm & Run (or just press Enter) </br>
 
 ![app-content-loading-1](https://github.com/MauBorre/WordPress-new-page-auto/assets/122322896/2b4657d0-54b7-4629-861a-6a1f7a3abd94)
 
