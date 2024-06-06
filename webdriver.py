@@ -59,8 +59,8 @@ def make_section(page, pink_container_count, s, lang_texts):
     add_new_container_btn.click()
     flexbox_btn = iframe.get_by_text("Flexbox")
     flexbox_btn.click()
-    six_grid_option = iframe.locator(f'div[data-preset="{s.preset}"]')
-    six_grid_option.click()
+    preset_option = iframe.locator(f'div[data-preset="{s.preset}"]')
+    preset_option.click()
     if pink_container_count == 0:
         pink_container = iframe.locator(f".elementor-section-wrap > div:nth-child({pink_container_count+1})").first
         pink_container.click(position={'x':0,'y':0})
