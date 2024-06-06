@@ -16,7 +16,7 @@ class App(ct.CTk):
         # window config
         self.geometry("933x700")
         self.title("Wp-auto")
-        self.bind('<Return>', self.confirm_all)
+        self.bind('<Return>', lambda e: self.verify_focus_not_in_text())
 
         # main frame
         self.main_frame = ct.CTkFrame(master=self, fg_color='transparent')
@@ -81,6 +81,13 @@ class App(ct.CTk):
         self.middle_frame.grid(pady=0)
         self.confirm_btn_inner.grid()
         self.secciones = {}
+
+    def verify_focus_not_in_text(self):
+        wid = str(self.focus_get())
+        if not wid[-5:] == '!text':
+            self.confirm_all()
+        else:
+            pass
 
     def eliminar_seccion_por_id(self, id):
         del self.secciones[id]
