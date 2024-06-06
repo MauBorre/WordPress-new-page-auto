@@ -33,6 +33,26 @@ def make_lang(lang):
             i+=1
     return lang_map
 
+def make_widget(c, page, lang_texts, timeout): # timeout 500 needed for first pass (avoids popup)
+    for _,w in c.widgets.items():
+        if repr(w) == 'HeaderWidget':
+            # add new Header 
+            page.get_by_role("button", name=lang_texts['elem-headerWidget-name']).click() 
+            # place header text content in new Header
+            page.get_by_placeholder(lang_texts['elem-headerWidget-placeholder']).fill(w.en.get())
+            # go to elementor-widgets menu
+            page.locator("id=elementor-panel-header-add-button").click()
+        if repr(w) == 'TextWidget':
+            # add new Text 
+            page.get_by_role("button", name=lang_texts['elem-textWidget-name']).click()
+            # place content text in new Text
+            page.get_by_role("button", name=lang_texts['elem-inner-widget-btn-text'],exact=True).click()
+            page.wait_for_timeout(timeout)
+            page.get_by_role("textbox").fill(w.txtbox.get("1.0",'end'))
+            page.keyboard.press("Insert") # necessary textbox confirm
+            # go to elementor-widgets menu
+            page.locator("id=elementor-panel-header-add-button").click()
+
 def make_section(page, pink_container_count, s, lang_texts):
     iframe = page.frame_locator("id=elementor-preview-iframe")
     add_new_container_btn = iframe.get_by_title("Add New Container")
@@ -50,24 +70,7 @@ def make_section(page, pink_container_count, s, lang_texts):
             gray_container.click(position={'x':0,'y':0})
             # go to elementor-widgets menu
             page.locator("id=elementor-panel-header-add-button").click()
-            for _,w in c.widgets.items():
-                if repr(w) == 'HeaderWidget':
-                    # add new Header 
-                    page.get_by_role("button", name=lang_texts['elem-headerWidget-name']).click() 
-                    # place header text content in new Header
-                    page.get_by_placeholder(lang_texts['elem-headerWidget-placeholder']).fill(w.en.get())
-                    # go to elementor-widgets menu
-                    page.locator("id=elementor-panel-header-add-button").click()
-                if repr(w) == 'TextWidget':
-                    # add new Text 
-                    page.get_by_role("button", name=lang_texts['elem-textWidget-name']).click()
-                    # place content text in new Text
-                    page.get_by_role("button", name=lang_texts['elem-inner-widget-btn-text'],exact=True).click()
-                    page.wait_for_timeout(500)
-                    page.get_by_role("textbox").fill(w.txtbox.get("1.0",'end'))
-                    page.keyboard.press("Insert") # necessary textbox confirm
-                    # go to elementor-widgets menu
-                    page.locator("id=elementor-panel-header-add-button").click()
+            make_widget(c,page,lang_texts,500)
     elif pink_container_count > 0:
         pink_container = iframe.locator(f".elementor-section-wrap > div:nth-child({pink_container_count+1})")
         pink_container.click(position={'x':0,'y':0})
@@ -77,23 +80,7 @@ def make_section(page, pink_container_count, s, lang_texts):
             gray_container.click(position={'x':0,'y':0})
             # go to elementor-widgets menu
             page.locator("id=elementor-panel-header-add-button").click()
-            for _,w in c.widgets.items():
-                if repr(w) == 'HeaderWidget':
-                    # add new Header  
-                    page.get_by_role("button", name=lang_texts['elem-headerWidget-name']).click() 
-                    # place header text content in new Header 
-                    page.get_by_placeholder(lang_texts['elem-headerWidget-placeholder']).fill(w.en.get())
-                    # go to elementor-widgets menu
-                    page.locator("id=elementor-panel-header-add-button").click()
-                if repr(w) == 'TextWidget':
-                    # add new Text 
-                    page.get_by_role("button", name=lang_texts['elem-textWidget-name']).click()
-                    # place content text in New Text
-                    page.get_by_role("button", name=lang_texts['elem-inner-widget-btn-text'],exact=True).click()
-                    page.get_by_role("textbox").fill(w.txtbox.get("1.0",'end'))
-                    page.keyboard.press("Insert") # necessary textbox confirm
-                    # go to elementor-widgets menu
-                    page.locator("id=elementor-panel-header-add-button").click()
+            make_widget(c,page,lang_texts,0)
 
 def batch(batch_init,lang,controller):
         #check/pick language
