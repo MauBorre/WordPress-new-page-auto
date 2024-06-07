@@ -4,9 +4,10 @@ Just load your content on the GUI and watch your browser work for you. </br>
 Hope you find it easy to use and useful! </br>
 
 ## Instalation
-1- Download all the files </br>
-2- Open command prompt into master folder </br>
-3- Run ```pip install -r requirements.txt``` </br>
+1- Install Python (ensure checking add to PATH option) </br>
+2- Download all the files </br>
+3- Open command prompt into master folder </br>
+4- Run ```pip install -r requirements.txt``` </br>
 
 ## Instructions
 1- Get the content for the new page. </br>
