@@ -133,8 +133,10 @@ def batch(batch_init,lang,controller):
                 page.wait_for_timeout(2500)
                 browser.close()
                 controller.success()
-            except:
+            except Exception as e:
                 controller.failed()
+                print(e)                       
+
 
 if __name__ == '__main__':
      ...
