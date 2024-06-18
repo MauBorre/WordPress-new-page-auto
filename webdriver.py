@@ -91,7 +91,7 @@ def batch(batch_init,lang,controller):
             try:
                 browser = p.chromium.launch(headless=False)
                 page = browser.new_page()
-                page.goto(batch_init['Host Url']+'/wp-admin')
+                page.goto(batch_init['Host Url'])
 
                 """User login"""
                 # buscar entry login | # poner texto user
