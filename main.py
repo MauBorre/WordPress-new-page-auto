@@ -145,6 +145,8 @@ class App(ct.CTk):
         host_url = self.host_entry.get()
         if not host_url.startswith("http"):
             host_url = "http://" + host_url
+        if not host_url.endswith('/wp-admin') or not host_url.endswith('/wp-admin/'):
+            host_url = host_url + '/wp-admin'
         user = self.user_entry.get()
         passw = self.pass_entry.get()
         lang = self.lang_switch.get()
