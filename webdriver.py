@@ -5,7 +5,8 @@ from playwright.sync_api import sync_playwright
 
 # translation matching by index
 lang_es = ['Encabezado',
-           'Escribe tu título',
+           #'Escribe tu título', # some spanish lang settings may differ in this text
+           'Introduce tu título',
            'Editor de texto',
            'HTML',
            'Publicar']
@@ -55,7 +56,12 @@ def make_widget(c, page, lang_texts, timeout): # timeout 500 needed for first pa
 
 def make_section(page, pink_container_count, s, lang_texts):
     iframe = page.frame_locator("id=elementor-preview-iframe")
+           
+    '''for some reason this button can appear in english or not even though
+    the wp language is correctly set to spanish...needs further testing'''
     add_new_container_btn = iframe.get_by_title("Add New Container")
+    # add_new_container_btn = iframe.get_by_title("Añadir nuevo contenedor")
+           
     add_new_container_btn.click()
     flexbox_btn = iframe.get_by_text("Flexbox")
     flexbox_btn.click()
