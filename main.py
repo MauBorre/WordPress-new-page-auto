@@ -18,16 +18,13 @@ class App(ct.CTk):
         self.title("Wp-auto")
         self.bind('<Return>', lambda e: self.confirm_if_focus_not_in_text())
 
-        # main frame
         self.main_frame = ct.CTkFrame(master=self, fg_color='transparent')
         self.main_frame.grid(padx=2)
         
-        # sections frame
         self.secciones_frame = ct.CTkScrollableFrame(master=self.main_frame,height=10) 
         self.secciones_frame.grid(column=1, ipadx=242, ipady=237, pady=8)
         self.secciones_frame._parent_canvas.configure(yscrollincrement=3)
 
-        # side frame
         self.side_frame = ct.CTkFrame(master=self.main_frame, height=10) 
         self.side_frame.grid(column=0, row=0, padx=8, sticky='ns', pady=8, ipady=0)
         self.side_frame_inner_container = ct.CTkFrame(master=self.side_frame, fg_color='transparent') 
@@ -44,7 +41,6 @@ class App(ct.CTk):
         self.new_section_btn.grid(padx=250, pady=10)
         self.new_section_btn.grid_propagate(0)
 
-        #elementor warning
         self.elementor_warning_lbl = ct.CTkLabel(master=self.gen_btn_inner, text="WP site and Elementor plugin \nmust be already installed \nand ready to use.")
         self.elementor_warning_lbl.grid(sticky='s', padx=5, pady=33)
 
