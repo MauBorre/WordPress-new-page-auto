@@ -506,6 +506,9 @@ class Widget:
         self.frm.destroy()
         self.controller.eliminar_widget_por_id(self.id)
 
+    def __repr__(self):
+        return self.__class__.__name__
+
 class HeaderWidget(Widget):
     def __init__(self, master, controller, id,row,width): 
         super().__init__(master, controller, id,row)
@@ -513,12 +516,6 @@ class HeaderWidget(Widget):
         self.frm.grid(padx=4) 
         self.en = ct.CTkEntry(master=self.frm, height=30,width=width) 
         self.en.grid(sticky='we') 
-    
-    def __str__(self):
-        return "HeaderWidget"
-    
-    def __repr__(self):
-        return "HeaderWidget"
 
 class TextWidget(Widget):
     def __init__(self, master, controller, id, row, width):
@@ -527,12 +524,6 @@ class TextWidget(Widget):
         self.frm.grid(padx=4) 
         self.txtbox = ct.CTkTextbox(master=self.frm, height=100,width=width)
         self.txtbox.grid(sticky='we') 
-
-    def __str__(self):
-        return "TextWidget"
-    
-    def __repr__(self):
-        return "TextWidget"
 
 class WidgetSelection:
     def __init__(self, master, controller, id, row):
