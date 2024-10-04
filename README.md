@@ -1,7 +1,6 @@
 # WordPress-new-page-auto
-The intention of this project is to haste new-page creation. </br>
-Just load your content on the GUI and watch your browser work for you. </br>
-Hope you find it easy to use and useful! </br>
+Haste new-page creation using browser automation. </br>
+Load your content on the GUI and watch your browser work for you. </br>
 
 ## Instalation
 1- Install Python (ensure checking add to PATH option) </br>
