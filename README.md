@@ -15,6 +15,8 @@ Load your content on the GUI and watch your browser work for you. </br>
 4- Put host and credentials </br>
 5- Click Confirm & Run (or just press Enter) </br>
 
+https://youtu.be/0iY5YzStwuw
+
 ![app_init](https://github.com/MauBorre/WordPress-new-page-auto/assets/122322896/d913e3a1-aedb-4f9d-84ce-54dee06bcc21)
 
 ![app-content-loading-1](https://github.com/MauBorre/WordPress-new-page-auto/assets/122322896/2b4657d0-54b7-4629-861a-6a1f7a3abd94)
@@ -22,4 +24,4 @@ Load your content on the GUI and watch your browser work for you. </br>
 
 ![app-finish](https://github.com/MauBorre/WordPress-new-page-auto/assets/122322896/dcd3a6c8-2e35-430d-8f2d-b2ff01f5928c)
 
-https://youtu.be/0iY5YzStwuw
+
