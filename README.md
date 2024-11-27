@@ -21,3 +21,5 @@ Load your content on the GUI and watch your browser work for you. </br>
 
 
 ![app-finish](https://github.com/MauBorre/WordPress-new-page-auto/assets/122322896/dcd3a6c8-2e35-430d-8f2d-b2ff01f5928c)
+
+https://youtu.be/0iY5YzStwuw
