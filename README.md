@@ -15,7 +15,6 @@ Load your content on the GUI and watch your browser work for you. </br>
 4- Put host and credentials </br>
 5- Click Confirm & Run (or just press Enter) </br>
 
-https://youtu.be/0iY5YzStwuw
 
 ![app_init](https://github.com/MauBorre/WordPress-new-page-auto/assets/122322896/d913e3a1-aedb-4f9d-84ce-54dee06bcc21)
 
